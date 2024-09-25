@@ -1,0 +1,67 @@
+# 1. Docker Explained
+---------------------
+
+* What is Docker?
+-----------------
+Applications working in one place but now others is a common problem in the world of software development.  So common in fact, that it's often called, the it works on my machine problem.
+
+
+* Reasons This Happens
+----------------------
+1 Missing tools
+
+2 Different configuration
+
+3 Hardware dependencies
+
+
+* Previous Solutions
+--------------------
+. Configuration Management
+
+. Virtual machines as code
+
+
+* Configuration management tools (Chef, Puppet, Ansible)
+--------------------------------------------------------
+Require knowledge about hardware and operating systems
+
+* Virtual machines as code (Vagrant)
+------------------------------------
+Heavy, slowish, require inconvenient configuration
+
+
+	* DOCKER USES IMAGES AND CONTAINERS TO ALLOW APPS TO RUN ANYWHERE, CONSISTENTLY.
+
+	* UNLIKE VIRTUAL MACHINES, CONTAINERS ARE VIRTUALIZED OPERATING SYSTEMS THAT ARE CONFIGURED WITH JUST ENOUGH TO RUN YOUR APP AND NOTHING ELSE.
+
+	* USING DOCKER IS KIND OF LIKE COOKING WITH PREMADE RECIPE BOXES.
+
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
