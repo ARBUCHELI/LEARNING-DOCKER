@@ -147,7 +147,61 @@ Heavy, slowish, require inconvenient configuration
 
 . Container images are bound to their parent operating systems
 
-. 
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+* The Docker Difference
+-----------------------
+	* WHILE DOCKER MIGHT BE THE FIRST THING THAT COMES TO MIND WHEN THINKING ABOUT CONTAINERS, DOCKER IS NOT THE FIRST OR THE ONLY WAY OF CREATING THEM.
+
+
+* History of containers
+-----------------------
+
+. 1979 - 1982
+-------------
+chroot() is added to 4.2BSD, allowing administrators to change what applications can "see", even when running as root.
+
+
+. 1999 - 2004
+-------------
+BSD jails and Solaris zones allow administrators to create entire virtual environments for applications.
+
+
+. 2007
+------
+Linux Containers (LXC) brings BSC jail-like functionality to Linux.
+
+
+* Docker Has Three Advantages
+-----------------------------
+. Dockerfiles make configuring and packaging apps and their environments really easy.
+
+. The Docker Hub makes sharing images with anyone in the world easy.
+
+. The Docker CLI makes it really easy to start your apps in containers.
+
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+
 
 
 
