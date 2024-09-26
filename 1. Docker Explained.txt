@@ -40,6 +40,83 @@ Heavy, slowish, require inconvenient configuration
 
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
+* Containers v. virtual machines
+--------------------------------
+
+* Containers vs. Virtual Machines
+---------------------------------
+. Containers are NOT smaller VMs.
+
+. Hypervisors bridge VMs to their hosts.
+
+
+	* VIRTUAL MACHINES RUN ON A PLATFORM CALLED A HYPERVISOR. THE HYPERVISOR'S MAIN JOB IS TO TRANSLATE OPERATIONS ON EMULATED HARDWARE WITHIN VIRTUAL MACHINES LIKE MEMORY PROCESSORS,
+	DISKS, ETCETERA TO OPERATIONS ON REAL HARDWARE WITHIN THEIR HOSTS.  THIS ALLOWS FOR A LOT OF FLEXIBILITY, BUT COMES AT THE COST OF DISK SPACE.
+
+* Virtual Machines
+------------------
+1 Use the hypervisor to emulate real hardware
+
+2 Can take up a lot of space
+
+3 Require YOU to install/configure operating system
+	
+4 Can run multiple apps at the same time
+
+5 Cannot interact with their hosts
+
+
+	* CONTAINERS ON THE OTHER HAND, RUN ON CONTAINER RUNTIMES (DOCKER) CONTAINER RUNTIMES WORK WITH THE OPERATING SYSTEM TO ALLOCATE HARDWARE AND COPY FILES AND DIRECTORIES, INCLUDING
+	THE PARTS WITH YOUR APPLICATIONS IN IT, INTO SOMETHING THAT LOOKS MORE LIKE ANY OTHER APP RUNNING ON THAT SYSTEM.
+
+
+* Containers
+------------
+1 Do not emulate any hardware and do not need to "boot up"
+
+2 Do not require operating system installation
+
+3 Take up much less space
+
+4 Can run only one app at a time (by design)
+
+5 Can interact with their hosts
+
+
+* Containers vs. Virtual Machines
+---------------------------------
+			Containers					Virtual Machines
+			----------					----------------
+			. Run in container runtimes			. Run on top of hypervisors
+			. Work alonside operaring systems		. Need hardware emulation
+			. Do not require OS configuration 		. Require OS configuration
+			. Run one app at a time (usually)		. Can run many apps at once
+
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 	
