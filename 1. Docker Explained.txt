@@ -95,6 +95,71 @@ Heavy, slowish, require inconvenient configuration
 
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
+* The anatomy of a container
+----------------------------
+	* A CONTAINER IS COMPOSED OF TWO THINGS: Take into consideration that namespaces, and control groups and Linux only features.  That means that docker can run natively only on Linux.
+		. A LINUX NAMESPACE
+		. A LINUS CONTROL GROUP
+
+
+		. NAMESPACES
+		------------
+		Linux kernel feature that provides the ability to expsoe different "views" of your system, to applications running within it.
+
+		This way, you can have an application think it's running as they say, route supe user with access to an entire file system and all sorts of hardware when it's actually 
+		running as user 154678 with acces to a single folder.
+
+
+		* Namespaces
+		------------
+			Name				Description
+			----				-----------
+			USERNS				User lists
+			MOUNT				Access to file systems
+			NET				Network communication
+			IPC				Interprocess communications
+			TIME				The ability to change time (NOT SUPPORTED BY DOCKER!)
+			CGROUP				Create control groups
+			UTC				Create host/domain names
+
+
+
+
+		* Control groups
+		----------------
+		Limit how much of any resource you can use.
+
+
+* Control Group Uses
+--------------------
+1 Monitor and restrict CPU usage
+
+2 Monitor and restrict network and disk bandwitdth
+
+3 Monitor and restrict memory consumption
+
+4 Assign disk quotas (NOT SUPPORTED BY DOCKER!)
+
+
+* Docker Limitations
+--------------------
+. Natively only runs on Linux (and some newer versions of Windows as well)
+
+. Container images are bound to their parent operating systems
+
+. 
+
+
+
+	
+
+
+		
+
+		
+
+	
+
 
 
 
