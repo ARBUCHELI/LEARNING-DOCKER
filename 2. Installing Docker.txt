@@ -42,6 +42,46 @@ Docker Machine uses VirtualBox to create VMs that only run Docker.
 
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
+* Install Docker on a Mac with Docker Desktop
+---------------------------------------------
+https://www.docker.com
+
+macOS 10.15 or newer
+
+
+* Using Homebrew
+----------------
+https://brew.sh
+
+(Copy and paste the command for installing homebrew)
+
+$ brew install docker --cask
+
+To confirm that docker is working: $ docker run --rm hello-world
+
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
