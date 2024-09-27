@@ -62,6 +62,33 @@ To confirm that docker is working: $ docker run --rm hello-world
 
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
+* Install Docker on Windows with Docker Desktop
+-----------------------------------------------
+
+* Configuration
+---------------
+Use WSL 2 instead of Hyper-V (recommended)
+
+The Hyper V backend will run the Docker engine on a VM, just like Docker does on Macs.
+
+* The WSL 2 backend is more interesting:
+	Window has been capable of running a real Linux within Windows since Windows 10 Anniversary Edition, without virtualization.  This featue is enabled by the Windows kernel and 
+	performs mostly as fast as a real Linux intall on your computer.
+
+	
+	Remember, Docker only works natively in Linux, unless you are running Windows, which is also running Linux inside of it.
+
+
+$ docker ps --> To list containers.
+
+$ docker run hello-world
+
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+	
 
 
 
