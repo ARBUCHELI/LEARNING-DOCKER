@@ -1,0 +1,62 @@
+# 2. Installing Docker
+----------------------
+
+* Docker Desktop
+----------------
+		* DOCKER ONLY WORKS ON LINUX ...
+
+
+* Docker Machine
+----------------
+Docker Machine uses VirtualBox to create VMs that only run Docker.
+
+
+* Docker Machine Challenges
+---------------------------
+. VirtualBox, virtual machine, and VBoxManage knowledge required
+
+. Slower than Docker on LInux (especially volumes)
+
+
+		* DOCKER DESKTOP WORKS MORE CLOSELY WITH MAC AND WINDOWS TO PROVIDE A FASTER AND MORE SEAMLESS DOCKER EXPERIENCE.
+
+
+* Three Improvements
+--------------------
+. Uses much smaller and more tightly integrated virtual machines
+
+. Automatically handles volume and network port mapping
+
+. Comes with a really nice GUI
+
+
+* Alternatives
+--------------
+. A licensing challenge in 2021 created a community of Docker Desktop alternatives
+
+. Colima, Rancher Desktop, and Podman are examples of Docker Desktop alternatives
+
+
+		* LET'S INSTALL DOCKER DESKTOP!
+
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
