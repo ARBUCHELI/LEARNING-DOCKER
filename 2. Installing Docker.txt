@@ -86,6 +86,45 @@ $ docker run hello-world
 
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
+* Install Docker on Linux
+-------------------------
+https://docs.docker.io
+
+1) Ensure that you have curl installed by running: $ sudo apt install curl
+
+
+2) Dowload Docker's intallation script and save it into /tmp/get-docker.sh: $ curl -o /tmp/get-docker.sh https://get.docker.com
+
+
+3) Run the script: $ sh /tmp/get-docker.sh
+
+
+4) Confirm that Docker is running: sudo docker run hello-world
+
+
+5) To avoid using sudo every time we want to use docker: For exampe, for a username called linkedin: $ sudo usermod -aG docker linkedin
+
+
+6) To confirm that Docker is working: $ su -s $USER ---> This will take a lot of time
+Password:
+
+
+7) An alternative to confirm that Docker is working: $ sudo -u linkedin sh
+\u $ groups 
+
+\u $ docker run hello-world
+
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+
+
+
+
+
+
 
 
 	
