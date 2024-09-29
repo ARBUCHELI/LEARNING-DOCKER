@@ -15,6 +15,48 @@ $ docker network create --help
 
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
+* Create a Docker container
+---------------------------
+
+	* CONTAINERS ARE CREATED FROM CONTAINER IMAGES. CONTAINER IMAGES ARE A COMPRESSED AND PRE-PACKAGED FILE SYSTEM THAT CONTAIN YOUR APP ALOG WITH ITS ENVIRONMENT AND CONFIGURATION
+	WITH AN INSTRUCTION ON HOW TO START YOUR APPLICATION.
+
+
+$ docker container create --help (To see how the docker container create commmand works)
+
+. Example:
+----------
+$ docker container create hello-world:linux
+
+In the output, the "Pull complete" message, will tell us that the pulling was successful.
+
+$ docker ps (To list the containers that we've create)
+
+$ docker ps --all (To see all the containers docker knows about)
+
+$ docker container start f47cb1482e931ddc5aa04d928fb2894c30a0868df549c236349e6ddb4b9d0eae (To start a container)
+
+. STATUS ---> Exited (0) 15 seconds ago ---> means that the entry point was executed successfully.
+
+. To see some messages comming from our container we can type this:
+
+$ docker logs f47 (The first three characters of the ID of our container).
+
+	* ANOTHER WAY TO GET THIS OUTPUT WHITHOUT HAVING TO RESORT TO DOCKER LOGS EVERY TIME IS TO START THE CONTAINER AND "ATTACH" OUR TERMINAL TO THE CONTAINER'S OUTPUT
+
+$ docker container start --attach f47
+
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+
+
+
+
+
+	
 
 
 
