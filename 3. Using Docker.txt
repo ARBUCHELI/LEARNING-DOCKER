@@ -58,6 +58,33 @@ $ docker run hello-world:linux
 
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
+* Create a Docker container from Dockerfiles, part 1
+----------------------------------------------------
+vim Dockerfile
+
+FROM ubuntu (Tells docker which existing docker image to base your docker image off of. This can be any existing image, either local or from the Internet).
+
+LABEL maintainer="Carlos Nunez <dev@carlosnunez.me>" (Maintainer).
+
+USER root (Tells docker which user to use for any docker file command underneath it. By default, docker will use the "root user" to execute commands).
+
+COPY ./entrypoint.bash / (Copies files from a directory provided to the Docker build command to the container image). The directory provided is usually called the context.  Usually is the
+working directory but it hasn't to be.
+
+RUN apt -y update (Run commands customize the image. This is a great place to install additional software or configure files needed by your application)
+RUN apt -y install curl bash
+RUN chmod 755 /entrypoint.bash
+
+USER nobody (This sets the default users to the powerless nobody user.  This ensures that we can't break out of the container, and potentially change important files on our host).
+
+ENTRYPOINT [ "/entrypoint.bash" ] (The entry point tells Docker what command containers created from this image should run. ( # CMD command can be used as well.)
+
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+
 
 
 
