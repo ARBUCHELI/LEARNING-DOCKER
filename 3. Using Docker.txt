@@ -95,6 +95,61 @@ $ docker run our-first-image
 
 * Interact with your container
 ------------------------------
+$ vim server.Dockerfile
+
+OUTPUT:
+
+FROM ubuntu
+LABEL maintainer="Carlos Nunez <dev@carlosnunez.me>"
+
+USER root
+COPY ./server.bash /
+
+RUN chmod 755 /server.bash
+RUN apt -y update
+RUN apt -y install bash
+
+USER nobody
+
+ENTRYPOINT [ "/server.bash" ]
+
+$ docker build --file server.Dockerfile --tag our-first-server .
+
+$ docker run our-first-server --> Containers are not interactive by default.  That means that containers won't accept key strokes by default.  
+With this command the container won't stop. It will be necessary to open a new terminal, get the id of the container and run another command:
+
+$ docker ps
+
+$ docker kill b529
+
+	TO WORK AROUND ISSUES LIKE THIS WE USE --d
+
+$ docker run -d our-first-server
+
+	docker exec WILL ALLOW US TO RUN ADDITIONAL COMMANDS FROM THIS CONTAINER
+
+$ docker exec b3cb date
+
+	YOU CAN EVEN USE exec TO START TERMINAL SESSIONS WITHIN THE CONTAINER
+
+Let's say that we want to use a bash shell within the container to do this (for example for troubleshooting)
+
+Since we are going to be entering keystrokes, we need to tell exec that this command needs to be interactive.
+
+Additionally since we are starting a shell, we'll also need to tell Docker, that we'll need something called a quote, unquote, sudo TTY, so that our terminal can properly interact with 
+the container's terminal.
+
+$ docker exec --interactive --tty b3cb bash
+
+$ Ctrl + d --> To get out of the container's terminal
+
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+
+
 
 
 
