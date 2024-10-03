@@ -146,6 +146,52 @@ $ Ctrl + d --> To get out of the container's terminal
 
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
+* Stopping and removing the container
+-------------------------------------
+	DOCKER DOES NOT STOP OR REMOVE CONTAINERS FOR YOU
+
+$ docker ps -a (To list all the containers)
+
+$ docker stop fd69 (To stop containers)
+
+	IF WE WANT TO FORCELLY STOP A CONTAINER TO OBLIGE IT TO STOP QUICKLY WE CAN TYPE
+
+$ docker stop -t 0 
+
+$ docker rm 79f6 (To remove containers)
+
+$ docker rm -f (To remove containers that are running)
+
+	IF WE WANT TO FORCELLY STOP A LIST OF CONTAINERS
+
+$ docker ps -aq (To get the list of the ids of the containers)
+
+	A PIPE SYMBOL WILL ALLOW YOU TO FEED THE OUTPUT FROM THE COMMAND IN THE LEFT, TO THE COMMAND ON THE RIGHT (THIS IS A LINUX TRICK)
+
+$ docker ps -aq | xargs docker rm 
+
+	WE ALSO CAN REMOVE IMAGES
+
+$ docker rmi
+
+. Example
+---------
+$ docker rmi our-first-server
+
+	TO FORCE THE DELETION OF IMAGES
+
+$ docker rmi -f (This force the removal but can lead to unpredictable behavior)
+
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+
+
+
+
+
 
 
 
