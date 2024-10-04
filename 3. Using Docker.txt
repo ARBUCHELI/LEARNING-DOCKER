@@ -185,6 +185,33 @@ $ docker rmi -f (This force the removal but can lead to unpredictable behavior)
 
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
+* Binding ports to your container
+---------------------------------
+	DOCKER PROVIDES THE ABILITY TO ACCESS NETWORK PORTS WITHIN THE CONTAINER, WITH SOMETHING CALLED PORT BINDING.
+
+$ docker build -t our-web-server -f web-server.Dockerfile .
+
+$ docker run -d our-web-server
+
+	IF WE GO TO localhost:5000, THAT WON'T WORK, BECAUSE WE NEED TO MAP PORT 5000 FROM WITHIN THE CONTAINER TO A PORT ON OUR ACTUAL MACHINE.
+
+$ docker rm -f <id> or <name> (TO STOP AND REMOVE THE CONTAINER).
+
+	-p THIS FLAG IS USED TO TELL DOCKER TO BIND PORTS.
+
+$ docker run -d --name our-web-server -p 5001:5000 our web-server (MNEMONIC IS OUTSIDE / INSIDE)	
+
+	NOW I GO TO PORT localhost:5001 THAT IS THE PORT THE CONTAINER IS MAPPED TO.
+
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+
+
+
+
 
 
 
