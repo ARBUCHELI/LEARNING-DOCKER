@@ -248,6 +248,33 @@ $ cat /tmp/this_file_does_not_exist
 
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
+* Introduction to Docker Hub
+----------------------------
+	CONTAINER IMAGES THAT DON'T HAVE A VERSION AUTOMATICALLY GET TAGGED WITH THE VERSION CALLED LATEST.
+
+
+	DOCKER HUB IS THE DOCKER CLIENT'S DEFAULT CONTAINER IMAGE REGISTRY.
+
+
+* Let's Push Our First Image!
+-----------------------------
+. Create an account on Docker-Hub
+
+. Store our our-web-server Docker Image
+
+. Create another version of our-web-server
+
+. Push that version into Docker Hub
+
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+
+	
+
+	
 
 
  
