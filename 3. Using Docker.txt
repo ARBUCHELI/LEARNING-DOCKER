@@ -206,6 +206,58 @@ $ docker run -d --name our-web-server -p 5001:5000 our web-server (MNEMONIC IS O
 
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
+* Saving data from containers
+-----------------------------
+	TO CREATE AND IMMEDIATELY REMOVE A CONTAINER
+
+	--entrycpoint TO TELL DOCKER THAT I'M GOING TO USE A SHELL COMMAND
+
+$ docker run --rm --entrypoint sh ubuntu -c "echo 'Hello there.'> /tmp/file && cat /tmp/file"
+
+$ cat /tmp/file ---> No such file or directory (EVERYTHING YOU CREATE WITHIN A CONTAINER STAYS WITHIN THE CONTAINER, ONCE THE CONTAINER STOPS, THE DATA GETS DELETED WITH IT).
+
+
+	WE CAN USE THE VOLUME MOUNTING FEATURE TO WORK AROUN THIS.
+
+$ docker run --rm --entrypoint sh -v /tmp/container:/ubuntu ubuntu -c "echo 'Hello there.'> /tmp/file && cat /tmp/file"
+
+	REMEMBER THAT IN LINUX cat IS USED TO RECOVER INFORMATION.
+
+
+	WE CAN ALSO TRY TO MAP FILES ON OUR COMPUTER TO FILES IN THE CONTAINER.
+
+
+$ touch /tmp/change_this_file
+
+$ docker run --rm --entrypoint sh -v  /tmp/change_this_file:/tmp/file ubuntu - c "echo 'Hello there.'> /tmp/file && cat /tmp/file"
+
+
+	IF WE DO THE FOLLOWING:
+
+$ docker run --rm --entrypoint sh -v  /tmp/this_file_does_not_exist:/tmp/file ubuntu - c "echo 'Hello there.'> /tmp/file && cat /tmp/file"
+
+>> OUTPUT >> sh: 1: cannot create /tmp/file: Is a directory (THIS IS THE FILE DOESN'T EXIST AND DOCKER ASSUMES IT WAS A DIRECTORY).
+
+
+$ cat /tmp/this_file_does_not_exist
+
+>> OUTPUT >> cat: /tmp/this_file_does_not_exist: Is a directory (IN THIS CASE, DOCKER ACTUALLY CREATED A DIRECTORY AND MOUNTED IT AS A DIRECTORY BEFORE IT RAN THE COMMAND).
+
+	THE LESSON HERE IS TO MAKE SURE THAT YOU'RE MOUNTING REAL FILES IF YOU USE -v WITH FILES.
+
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+ 
+
+
+
+
+
+
+
 
 
 
