@@ -284,6 +284,20 @@ $ docker push carlosnunez/our-web-server:0.0.1
 
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
+* Checking your images in Docker Hub
+------------------------------------
+	WHAT HAPPENS IF WE PUSH THE IMAGE BUT WITH ANOTHER TAG?
+
+$ docker tag our-web-server carlosnunez/our-web-server:0.0.2
+
+$ docker push carlosnunez/our-web-server:0.0.2
+
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+
 
 
 
