@@ -295,6 +295,65 @@ $ docker push carlosnunez/our-web-server:0.0.2
 
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
+* Challenge: Starting NGINX
+---------------------------
+
+* Challenge 1
+-------------
+. Start an instance of NGINX in Docker with the included website
+
+. Name the container "website"
+
+. Website should be accessible at http://localhost:8080
+
+. Ensure that the container is removed when done
+
+. Map $PWD/website to /usr/share/nginx/html if you volume mount 
+
+. Have fun!
+
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+* Solution: Starting NGINX
+--------------------------
+	THE CHALLENGE WAS TO SERVE A WEBSITE ON ENGINE X WITH DOCKER, GIVEN SOME CONFIGURATION AND THE STATIC SITE. 
+
+	THE FIRST PIECE OF INFORMATION THAT WE'RE GIVEN IS TO USE THE ENGINE X IMAGE FROM DOCKER HUB (WE DON'T NEED TO CREATE AN IMAGE)
+
+	NEXT, WE WERE TOLD TO NAME OUR CONTAINER "website"
+
+$ docker run --name website -v "$PWD/website:/usr/share/nginx/html" -p 8080:80 --rm nginx
+
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
