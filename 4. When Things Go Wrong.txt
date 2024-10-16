@@ -87,6 +87,34 @@ $ docker inspect alpine | less
 
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
+* Challenge: Fix a broken container
+-----------------------------------
+
+* Challenge
+-----------
+Fix a broken container
+
+* Challenge 2
+-------------
+. Fix the Dockerfile and script provided
+
+. You will see the below when the container is working properly
+
+
+* Hints
+-------
+. Use the -it flag when you run your container
+
+. Use docker ps and docker rm in another terminal if yours hangs!
+
+. No shell scripting experience required, but consult any docs your need!
+
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+
 
 
 
