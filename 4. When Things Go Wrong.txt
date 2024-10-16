@@ -1,0 +1,37 @@
+* 4. When Things Go Wrong
+-------------------------
+
+* Help! I can't seem to create more containers
+----------------------------------------------
+
+* Example:
+----------
+	YOU TYPE THIS COMMAND
+
+$ docker run --name=app --rm openjdk:19
+
+	AND SUDDENLY YOU SEE A MESSAGE LIKE THIS (AMONG A LOT OF OTHER TEXT)
+
+: no space left on device: unknown.
+
+	YOU RUN THE FOLLOWING COMMAND TO SEE IF YOU HAVE OR NOT SPACE
+
+$ df - h
+
+	HOW TO FIX IT
+
+$ docker images
+
+	TO REMOVE IMAGES THAT WE ARE NOT LONGER USING)
+
+* Example:
+----------
+$ docker rmi carlosnunez/xq nginx selenium/standalone-chrome selenium/standalone-firefox
+
+
+
+
+ 
+
+
+
