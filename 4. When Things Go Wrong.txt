@@ -28,6 +28,123 @@ $ docker images
 ----------
 $ docker rmi carlosnunez/xq nginx selenium/standalone-chrome selenium/standalone-firefox
 
+	THE NEXT COMMAND SMARTLY REMOVES USELESS DATA THAT'S BURNING A LOE IN OUR DISC
+
+$ docker system prune
+
+	NOW IF YOU TRY TO RUN THE FIRST COMMAND AGAIN, YOU'LL BE SUCCESSFUL
+
+$ docker run --name=app --rm openjdk:19
+
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+* Help! My container is really slow
+-----------------------------------
+
+$ docker stats (THIS GIVES YOU A SNAPSHOT OF YOUR CONTAINE'S PERFORMANCE AS IT'S RUNNING)
+
+$ docker run --name=alpine --entrypoint=sleep -d alpine infinity (--entrypoint=sleep, AND infinity ARE USED TO PUT THE CONTAINER TO SLEEP FOREVER)
+
+$ docker ps
+
+$ docker stats alpine
+
+	IN ANOTHER TERMINAL START A SHELL INTO THE CONTAINER
+
+$ docker exec -i -t alpine sh
+
+	THEN RUN THE yes PROGRAM TO SET UP THE CPU ON FIRE (THIS WILL PRINT y INDEFINITELY)
+
+/ # yes
+
+	TO MONITOR THE PROCESS
+
+* Example
+---------
+Let's say that we have
+
+$ docker exec -d alpine sleep infinity
+$ docker exec -d alpine sleep infinity
+$ docker exec -d alpine sleep infinity
+
+$ docker top alpine (TO SEE THE RUNNING PROCESSES)
+
+	TO SHOW ADVANCED INFORMATION ABOUT A CONTAINER THAT'S RUNNING IN JSON FORMAT (ALSO VERY CONVENIENT FOR SCRIPTING AGAINST DOCKER)
+
+$ docker inspect alpine
+
+	TO GIVE A MORE CONVENIENT AND EASY TO READ OUTPUT
+
+$ docker inspect alpine | less
+
+	TO SEND THE DATA INTO A VIEWER (THIS IS ALSO CALLED PAGINATING)
+
+: Restarting
+: RestarCount
+: Mounts
+
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+
+
+
+
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+	
+
 
 
 
