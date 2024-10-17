@@ -5,20 +5,54 @@
 -----------------------
 
 	USE VERIFIED IMAGES ---> CHECK FOR THE DOCKER OFFICIAL IMAGE (BADGE)
-	They are more secure!
+		They are more secure!
 
 
 	CONTAINER IMAGE SCANNER
-	Use a container image scanner if using a verified image isn't possible.
+		Use a container image scanner if using a verified image isn't possible.
 
 
-	IMAGE SCANNERS
-	. Clair
+	IMAGE SCANNERS (Free)
+		. Clair
 
-	. Trivy
+		. Trivy
 
-	. Dagda
+		. Dagda
 
+
+	AVOID TAGGING AS LATEST!
+		. You don't know the version of the app you're downloading
+
+		. The app's version can change when you run docker pull later
+
+		. latest can be overriden, making rollback difficult
+
+
+	
+	USE NON-ROOT USERS
+		. It makes your containers more secure!
+
+		. Use non-root users when running containers
+
+			$ docker run --rm -it --user somebody-else suspect-image:v1.0.1
+
+		. Use non-root users when creating images, too.
+
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+*
+
+
+	
+	
+
+
+	
+
+
+	
+	
 
 	
 
