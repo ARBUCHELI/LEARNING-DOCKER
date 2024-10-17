@@ -67,9 +67,83 @@
 
 * Level up even more with Kubernetes
 ------------------------------------
+	WHEN RUNNING HUNDREDS OR THOUSANDS OF CONTAINERS IN PRODUCTION
+
+	* CHALLENGES
+	------------
+		. Difficult to link Docker networks together across hosts
+
+		. Controlling Docker containers across multiple hosts is cumbersome
+
+		. No built-in solutions for moving containers from host to host
+	
+		. Production concerns (load balancing and securing traffic) difficult with Docker client alone
+
+
+	*  CONTAINER ORCHESTRATORS
+	--------------------------
+		. Container orchestrators create, move, and scale containers across clusters of hosts.
+
+
+		. Examples
+		----------
+			. Docker Swarm
+
+			. Marathon (maintained by Mesosphere)
+
+			. HashiCorp Nomad
+
+			. Cloud offerings (Amazon Elastic Container Service, Azure container services)
+
+
+	KUBERNETES IS A POPULAR CONTAINER ORCHESTRATOR CAPABLE OF MANAGING VERY LARGE NUMBERS OF CONTAINERS
+
+	KUBERNETES USES A DISTRIBUTED ARCHITECTURE TO RUN AND CONNECT HUNDREDS OF THOUSANDS OF CONTAINERS WITH MINIMAL HARDWARE
+
+	KUBERNETES ALSO MAKES GROUPING, SCALING, AND CONNECTING CONTAINERS WITH THE OUTSIDE WORLD REALLY EASY
+
+	LOAD BALANCING AND SECURING CONTAINER TRAFFIC TO/FROM THE OUTSIDE WORLD ARE MUCH EASIER WITH KUBERNETES
+
+	THE KUBERNETES ECOSYSTEM MAKES IT POSSIBLE TO BUILD YOUR OWN DEVELOPER EXPERIENCE
+
+	KUBERNETES IS THE DELIVERY SERVICE OF DOCKER CONTAINERS
+
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+
+	
+
+	
+
+			
 
 
 
