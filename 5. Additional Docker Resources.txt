@@ -41,7 +41,70 @@
 
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-*
+* Taking it to the next level with Docker Compose
+-------------------------------------------------
+	WHEN YOU HAVE AN APPLICATION THAT RELIES ON MULTIPLE COMPONENTS THAT ARE RUNNING SEPARATELY
+
+	YOU COULD ...
+		. Roll them into one giant Docker image! (Pleae don't) ---> YOU RISK LOSING DATA OR EXPECT UNPREDICTABLE BEHAVIOR
+
+		. Create a bunch of containers and link them together! ---> TIME-CONSUMING AND ERROR-PRONE
+			You can run multiple containers and connect them all through virtual networks and separate data volumes managed entirely by the Docker engine
+
+
+
+	DOCKER COMPOSE ---> THE BEST SOLUTION FOR THIS AT MIDDLE SCALE
+	--------------
+	Docker Compose makes starting and connecting multiple containers as easy as docker-compose up
+
+	With compose you use a single file called the compose manifest to define all of your containers and how they relate to each other.  Starting those containers together is as
+	easy as running Docker-compose up.
+
+	https://docs.docker.com/compose
+
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+* Level up even more with Kubernetes
+------------------------------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+
+	
+
+		
+
+
+		
+
 
 
 	
