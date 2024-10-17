@@ -1,0 +1,26 @@
+# 5. Additional Docker Resources
+--------------------------------
+
+* Docker best practices
+-----------------------
+
+	USE VERIFIED IMAGES ---> CHECK FOR THE DOCKER OFFICIAL IMAGE (BADGE)
+	They are more secure!
+
+
+	CONTAINER IMAGE SCANNER
+	Use a container image scanner if using a verified image isn't possible.
+
+
+	IMAGE SCANNERS
+	. Clair
+
+	. Trivy
+
+	. Dagda
+
+
+	
+
+
+	
