@@ -112,6 +112,191 @@ Fix a broken container
 
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
+* Solution: Fix a brokekn container
+-----------------------------------
+
+$ ls
+
+$ docker build -t app .
+
+>> DOCKER CAN'T FILE THE IMAGE
+
+	 HOW TO FIX IT
+
+$ https://wwww.docker.com  
+
+	FIND UBUNTU FOR USING IT
+
+$ vim Dockerfile
+
+# HINT: Remember that you can find `ubuntu` images in the Docker Hub!
+FROM ubuntu:xeniall ---> THE ERROR IS HERE IN THE Dockerfile
+
+COPY /app.sh /
+RUN chmod +x /app.sh
+
+ENTRYPOINT [ "/app.sh" ]
+
+	FIX THE DOCKERFILE
+
+# HINT: Remember that you can find `ubuntu` images in the Docker Hub!
+FROM ubuntu:xenial ---> THE ERROR IS HERE IN THE Dockerfile
+
+COPY /app.sh /
+RUN chmod +x /app.sh
+
+ENTRYPOINT [ "/app.sh" ]
+
+	AND RUN THE COMMAND AGAIN
+
+$ docker build -t app .
+
+	AFTER RUNNING THE FOLLOWING COMMAND, THE APP STARTS TO BEGIN PROCESSING BUT VERY SLOWLY
+
+$ docker run -it app
+
+	LET'S RUN THE CONTAINER AGAIN WITH A NAME THIS TIME (WE'LL USE THE NAME IN OTHER TERMINAL)
+
+$ docker run -it --name=app_container app
+
+	IN OTHER TERMINAL
+
+$ docker stats app_container
+
+$ docker top app_container
+
+>> IN THE OUTPUT THERE IS SOMETHING WEIRD:  yes IS THERE AGAIN:
+
+$ docker top app_container1
+UID                 PID                 PPID                C                   STIME               TTY
+       TIME                CMD
+root                25152               25131               0                   13:13               ?
+       00:00:00            bash /app.sh
+root                25179               25152               0                   13:14               ?
+       00:00:00            timeout 9 yes
+root                25180               25179               99                  13:14               ?
+       00:00:05            yes
+
+
+	THIS MEANS THAT WE NEED TO MODIFY THE APP
+
+	TO SOLVE IT WE NEED TO MODIFY THE Dockerfile 
+
+	BUT WE NEED TO EDIT app.sh
+
+#!/usr/bin/env bash
+
+start() {
+  echo "Application starting"
+}
+
+process() {
+  _process() {
+    timeout "$((i*i))" yes &>/dev/null ---> HERE WE CAN FIND THE yes PROGRAM THAT CREATES SO MUCH TROUBLE
+    echo "Application processing ($1/5)"
+  }
+
+  for i in $(seq 1 5)
+  do _process "$i"
+  done
+}
+
+finish() {
+  echo "Application finished!"
+}
+
+start &&
+  process &&
+  finish
+
+
+	WE NEED TO EDIT app.sh
+
+#!/usr/bin/env bash
+
+start() {
+  echo "Application starting"
+}
+
+process() {
+  _process() {
+    echo "Application processing ($1/5)"
+  }
+
+  for i in $(seq 1 5)
+  do _process "$i"
+  done
+}
+
+finish() {
+  echo "Application finished!"
+}
+
+start &&
+  process &&
+  finish
+
+
+	AFTER THIS RUN THE COMMAND AGAIN
+
+$ docker build -t app .
+
+	NOW IT BUILDS REALLY QUICKLY
+
+$ docker rm app_container
+
+$ docker run -it --name=app_container app
+
+
+	NOW IT RUNS REALLY FAST AND THAT PROVES THAT WE FIXED THE BROKEN CONTAINER!
+
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
